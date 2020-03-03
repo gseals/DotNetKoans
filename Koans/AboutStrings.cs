@@ -301,11 +301,11 @@ broken line";
             var str = "the:rain:in:spain";
             var regex = new System.Text.RegularExpressions.Regex(":");
             string[] words = regex.Split(str);
-            Assert.Equal(new[] { FILL_ME_IN }, words);
+            Assert.Equal(new[] { "the", "rain", "in", "spain" }, words);
 
             //A full treatment of regular expressions is beyond the scope
             //of this tutorial. The book "Mastering Regular Expressions"
-            //is highly recommended to be on your bookshelf hiiis
+            //is highly recommended to be on your bookshelf
         }
 
         [Step(33)]
@@ -314,7 +314,7 @@ broken line";
             var name = "John Doe";
             var age = 33;
             var str = $"Mr. {name} is {age} years old";
-            Assert.Equal(FILL_ME_IN, str);
+            Assert.Equal("Mr. John Doe is 33 years old", str);
         }
     }
 }
